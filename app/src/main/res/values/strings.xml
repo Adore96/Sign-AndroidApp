@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Sign Android</string>
+    <string name="app_name">Sinhala Sign Language Translator</string>
+    <string name="toggle_camera">Toggle Camera</string>
+    <string name="detect_object">Detect Sign</string>
 </resources>
