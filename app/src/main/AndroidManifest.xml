@@ -10,6 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".basicSigns"></activity>
+        <activity android:name=".aboutApp" />
+        <activity android:name=".mainDashboard" />
         <activity
             android:name=".MainActivity"
             tools:ignore="Instantiatable">
