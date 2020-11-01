@@ -10,12 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CallAuthorities"></activity>
-        <activity android:name=".MainDashboard" />
-        <activity android:name=".basicSigns" />
+        <activity android:name=".liveFeed"></activity>
+        <activity android:name=".CallAuthorities" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".generalSigns" />
         <activity android:name=".aboutApp" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainDashboard"
             tools:ignore="Instantiatable">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

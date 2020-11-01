@@ -19,7 +19,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp"
-        android:background="@drawable/callAuth" />
+        android:background="@drawable/callauth" />
 
     <TextView
         android:id="@+id/textView3"
