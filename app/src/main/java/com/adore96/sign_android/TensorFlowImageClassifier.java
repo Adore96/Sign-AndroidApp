@@ -20,8 +20,11 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * Created by amitshekhar on 17/03/18.
+ */
 
-public class TensorFlowImageClassifier implements com.adore96.sign_android.Classifier {
+public class TensorFlowImageClassifier implements Classifier {
 
     private static final int MAX_RESULTS = 3;
     private static final int BATCH_SIZE = 1;
@@ -40,11 +43,11 @@ public class TensorFlowImageClassifier implements com.adore96.sign_android.Class
 
     }
 
-    static com.adore96.sign_android.Classifier create(AssetManager assetManager,
-                                                     String modelPath,
-                                                     String labelPath,
-                                                     int inputSize,
-                                                     boolean quant) throws IOException {
+    static Classifier create(AssetManager assetManager,
+                             String modelPath,
+                             String labelPath,
+                             int inputSize,
+                             boolean quant) throws IOException {
 
         TensorFlowImageClassifier classifier = new TensorFlowImageClassifier();
         classifier.interpreter = new Interpreter(classifier.loadModelFile(assetManager, modelPath), new Interpreter.Options());
@@ -52,9 +55,10 @@ public class TensorFlowImageClassifier implements com.adore96.sign_android.Class
         classifier.inputSize = inputSize;
         classifier.quant = quant;
 
-        return (Classifier) classifier;
+        return classifier;
     }
 
+    @Override
     public List<Recognition> recognizeImage(Bitmap bitmap) {
         ByteBuffer byteBuffer = convertBitmapToByteBuffer(bitmap);
         if(quant){
@@ -69,7 +73,7 @@ public class TensorFlowImageClassifier implements com.adore96.sign_android.Class
 
     }
 
-
+    @Override
     public void close() {
         interpreter.close();
         interpreter = null;

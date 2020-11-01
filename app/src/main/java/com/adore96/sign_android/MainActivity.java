@@ -23,13 +23,12 @@ import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String MODEL_PATH = "mobilenet_float_v1_224.tflite";
+    private static final String MODEL_PATH = "mobilenet_quant_v1_224.tflite";
     private static final boolean QUANT = true;
     private static final String LABEL_PATH = "labels.txt";
     private static final int INPUT_SIZE = 224;
 
-
-    private com.adore96.sign_android.Classifier classifier;
+    private Classifier classifier;
 
     private Executor executor = Executors.newSingleThreadExecutor();
     private TextView textViewResult;
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
                 imageViewResult.setImageBitmap(bitmap);
 
-                final List<com.adore96.sign_android.Classifier.Recognition> results = classifier.recognizeImage(bitmap);
+                final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
 
                 textViewResult.setText(results.toString());
 

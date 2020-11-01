@@ -66,7 +66,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:paddingBottom="3dp"
-                    android:src="@drawable/signOne"></ImageView>
+                    android:src="@drawable/signone"></ImageView>
 
                 <TextView
                     android:layout_width="100dp"
@@ -108,7 +108,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:paddingBottom="3dp"
-                    android:src="@drawable/signTwo"></ImageView>
+                    android:src="@drawable/signtwo"></ImageView>
 
                 <TextView
                     android:layout_width="100dp"
@@ -153,7 +153,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:paddingBottom="3dp"
-                    android:src="@drawable/signThree"></ImageView>
+                    android:src="@drawable/signthree"></ImageView>
 
                 <TextView
                     android:layout_width="100dp"
@@ -196,7 +196,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:paddingBottom="3dp"
-                    android:src="@drawable/signFour"></ImageView>
+                    android:src="@drawable/signfour"></ImageView>
 
                 <TextView
                     android:layout_width="100dp"
@@ -241,7 +241,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:paddingBottom="3dp"
-                    android:src="@drawable/signFive"></ImageView>
+                    android:src="@drawable/signfive"></ImageView>
 
                 <TextView
                     android:layout_width="100dp"
@@ -284,7 +284,7 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center_horizontal"
                     android:paddingBottom="3dp"
-                    android:src="@drawable/signSix"></ImageView>
+                    android:src="@drawable/signsix"></ImageView>
 
                 <TextView
                     android:layout_width="100dp"
