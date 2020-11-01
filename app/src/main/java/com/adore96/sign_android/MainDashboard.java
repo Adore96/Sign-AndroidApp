@@ -18,7 +18,7 @@ public class MainDashboard extends AppCompatActivity implements View.OnClickList
 
         liveFeed = (CardView) findViewById(R.id.livefeed);
         imageTrans = (CardView) findViewById(R.id.imageTrans);
-        videoTrans = (CardView) findViewById(R.id.videoTrans);
+        videoTrans = (CardView) findViewById(R.id.openGallery);
         generalSigns = (CardView) findViewById(R.id.generalSigns);
         aboutApp = (CardView) findViewById(R.id.aboutApp);
         contactAuth = (CardView) findViewById(R.id.contactAuth);
@@ -48,8 +48,8 @@ public class MainDashboard extends AppCompatActivity implements View.OnClickList
                 startActivity(i);
                 break;
 
-            case R.id.videoTrans:
-                i = new Intent(this, videoTrans.class);
+            case R.id.openGallery:
+                i = new Intent(this, openGallery.class);
                 startActivity(i);
                 break;
 

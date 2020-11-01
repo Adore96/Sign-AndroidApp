@@ -4,11 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class videoTrans extends AppCompatActivity {
+public class openGallery extends AppCompatActivity {
+
+    private static final int SELECT_PICTURE = 1;
+
+    private String selectedImagePath;
+//    private ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_video_trans);
+        setContentView(R.layout.activity_open_gallery);
     }
 }

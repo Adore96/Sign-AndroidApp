@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/d5cc5a87d7e2bb32096f1f5d905ea446"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.adore96.sign_android.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textVieResult"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
+                android:fadeScrollbars="false"
+                android:gravity="center"
+                android:maxLines="15"
+                android:scrollbars="vertical"
+                android:text="@string/Upload_image"
+                android:textColor="@android:color/white"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btnDeectObject"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom|center"
+                android:text="@string/Upload_image"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewReslt"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/signsix" />
+
+        <TextView
+            android:id="@+id/textViesult"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fadeScrollbars="false"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:text="Sign Predicted"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            android:background="@color/colorPrimaryDark"/>
+
+        <ImageView
+            android:id="@+id/imageVieslt"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/signsix" />
+
+        <TextView
+            android:id="@+id/texiesult"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fadeScrollbars="false"
+            android:gravity="center"
+            android:scrollbars="vertical"
+            android:textColor="@android:color/white"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+</FrameLayout>
