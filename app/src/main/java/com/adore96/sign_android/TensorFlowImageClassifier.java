@@ -20,10 +20,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
-/**
- * Created by amitshekhar on 17/03/18.
- */
-
 public class TensorFlowImageClassifier implements Classifier {
 
     private static final int MAX_RESULTS = 3;
@@ -61,12 +57,12 @@ public class TensorFlowImageClassifier implements Classifier {
     @Override
     public List<Recognition> recognizeImage(Bitmap bitmap) {
         ByteBuffer byteBuffer = convertBitmapToByteBuffer(bitmap);
-        if(quant){
+        if (quant) {
             byte[][] result = new byte[1][labelList.size()];
             interpreter.run(byteBuffer, result);
             return getSortedResultByte(result);
         } else {
-            float [][] result = new float[1][labelList.size()];
+            float[][] result = new float[1][labelList.size()];
             interpreter.run(byteBuffer, result);
             return getSortedResultFloat(result);
         }
@@ -102,7 +98,7 @@ public class TensorFlowImageClassifier implements Classifier {
     private ByteBuffer convertBitmapToByteBuffer(Bitmap bitmap) {
         ByteBuffer byteBuffer;
 
-        if(quant) {
+        if (quant) {
             byteBuffer = ByteBuffer.allocateDirect(BATCH_SIZE * inputSize * inputSize * PIXEL_SIZE);
         } else {
             byteBuffer = ByteBuffer.allocateDirect(4 * BATCH_SIZE * inputSize * inputSize * PIXEL_SIZE);
@@ -115,14 +111,14 @@ public class TensorFlowImageClassifier implements Classifier {
         for (int i = 0; i < inputSize; ++i) {
             for (int j = 0; j < inputSize; ++j) {
                 final int val = intValues[pixel++];
-                if(quant){
+                if (quant) {
                     byteBuffer.put((byte) ((val >> 16) & 0xFF));
                     byteBuffer.put((byte) ((val >> 8) & 0xFF));
                     byteBuffer.put((byte) (val & 0xFF));
                 } else {
-                    byteBuffer.putFloat((((val >> 16) & 0xFF)-IMAGE_MEAN)/IMAGE_STD);
-                    byteBuffer.putFloat((((val >> 8) & 0xFF)-IMAGE_MEAN)/IMAGE_STD);
-                    byteBuffer.putFloat((((val) & 0xFF)-IMAGE_MEAN)/IMAGE_STD);
+                    byteBuffer.putFloat((((val >> 16) & 0xFF) - IMAGE_MEAN) / IMAGE_STD);
+                    byteBuffer.putFloat((((val >> 8) & 0xFF) - IMAGE_MEAN) / IMAGE_STD);
+                    byteBuffer.putFloat((((val) & 0xFF) - IMAGE_MEAN) / IMAGE_STD);
                 }
 
             }

@@ -4,11 +4,11 @@ import android.graphics.Bitmap;
 
 import java.util.List;
 
-/**
- * Created by amitshekhar on 17/03/18.
- */
-
 public interface Classifier {
+
+    List<Recognition> recognizeImage(Bitmap bitmap);
+
+    void close();
 
     class Recognition {
         /**
@@ -70,9 +70,4 @@ public interface Classifier {
             return resultString.trim();
         }
     }
-
-
-    List<Recognition> recognizeImage(Bitmap bitmap);
-
-    void close();
 }
