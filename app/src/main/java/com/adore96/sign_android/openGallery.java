@@ -45,6 +45,7 @@ public class openGallery extends AppCompatActivity {
                 selectedImagePath = getPath(selectedImageUri);
                 System.out.println("Image Path : " + selectedImagePath);
                 img.setImageURI(selectedImageUri);
+                System.out.println(selectedImagePath + " : Image Path");
             }
         }
     }
@@ -55,5 +56,9 @@ public class openGallery extends AppCompatActivity {
         int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
         cursor.moveToFirst();
         return cursor.getString(column_index);
+    }
+
+    public void clearImage(View view) {
+        img.setImageDrawable(null);
     }
 }
