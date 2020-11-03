@@ -45,7 +45,7 @@ public class openGallery extends AppCompatActivity {
                 selectedImagePath = getPath(selectedImageUri);
                 System.out.println("Image Path : " + selectedImagePath);
                 img.setImageURI(selectedImageUri);
-                System.out.println(selectedImagePath + " : Image Path");
+                System.out.println(selectedImageUri + " : Image URi");
             }
         }
     }
@@ -61,4 +61,6 @@ public class openGallery extends AppCompatActivity {
     public void clearImage(View view) {
         img.setImageDrawable(null);
     }
+
+//TODO set image the classifier
 }

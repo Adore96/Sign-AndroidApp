@@ -12,7 +12,6 @@
     tools:context="com.adore96.sign_android.MainActivity">
 
 
-
     <com.wonderkiln.camerakit.CameraView
         android:id="@+id/cameraView"
         android:layout_width="350dp"

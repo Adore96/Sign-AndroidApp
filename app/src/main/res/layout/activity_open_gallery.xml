@@ -36,9 +36,9 @@
                 android:maxLines="15"
                 android:scrollbars="vertical"
                 android:text="@string/Upload_image"
+                android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="30dp"
-                android:textAlignment="center"/>
+                android:textSize="30dp" />
 
             <Button
                 android:id="@+id/uploadbtn"
@@ -54,10 +54,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom|center"
+                android:onClick="clearImage"
                 android:text="Clear"
                 android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:onClick="clearImage"/>
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
 
@@ -85,9 +85,9 @@
                 android:maxLines="15"
                 android:scrollbars="vertical"
                 android:text="Prediction Result"
+                android:textAlignment="center"
                 android:textColor="@android:color/white"
-                android:textSize="30dp"
-                android:textAlignment="center"/>
+                android:textSize="30dp" />
 
             <Button
                 android:id="@+id/predictbtn"
