@@ -40,7 +40,7 @@
                 android:textSize="30dp" />
 
             <Button
-                android:id="@+id/btnDeectObject"
+                android:id="@+id/uploadbtn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom|center"
@@ -50,7 +50,7 @@
         </LinearLayout>
 
         <ImageView
-            android:id="@+id/imageViewReslt"
+            android:id="@+id/img"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginTop="10dp"
@@ -67,18 +67,10 @@
             android:text="Sign Predicted"
             android:textColor="@android:color/white"
             android:textSize="30dp"
-            android:background="@color/colorPrimaryDark"/>
-
-        <ImageView
-            android:id="@+id/imageVieslt"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:src="@drawable/signsix" />
+            android:background="@color/colorPrimaryDark" />
 
         <TextView
-            android:id="@+id/texiesult"
+            android:id="@+id/predictedtxt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:fadeScrollbars="false"
