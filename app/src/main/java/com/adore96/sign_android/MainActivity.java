@@ -23,10 +23,10 @@ import java.util.concurrent.Executors;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String MODEL_PATH = "mobilenet_quant_v1_224.tflite";
-    //    private static final String MODEL_PATH = "model7.tflite";
+    //    private static final String MODEL_PATH = "mobilenet_quant_v1_224.tflite";
+    private static final String MODEL_PATH = "converteted_sinhalasign.tflite";
     private static final boolean QUANT = true;
-    private static final String LABEL_PATH = "labels.txt";
+    private static final String LABEL_PATH = "label.txt";
     //    private static final String LABEL_PATH = "label.txt";
     private static final int INPUT_SIZE = 224;
 
